@@ -11,6 +11,34 @@ namespace Cars.CarInfo
         public string color;
         public int position;
         public int number;
-    
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+        public string Color
+        {
+            get
+            {
+                return color;
+            }
+        }
+        public int Position
+        {
+            get
+            {
+                return position;
+            }
+        }
+        public int Number
+        {
+            get
+            {
+                return number;
+            }
+        }
     }
 }
