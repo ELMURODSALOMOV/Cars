@@ -27,7 +27,7 @@ namespace Cars.CarInfo
 
         public string GetCarInfo()
         {
-            return $"Model: {Model}\nYear: {Year}\nPrice: {Price}";
+            return $"Model: {Model}\nYear: {Year}\nPrice: {Price}\nSpeed: {Speed}";
         }
 
         public decimal CalculateDepreciation(int years)
