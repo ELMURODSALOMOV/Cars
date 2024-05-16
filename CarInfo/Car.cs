@@ -7,38 +7,40 @@ namespace Cars.CarInfo
 {
     public class Car
     {
-        public string name;
-        public string color;
-        public int position;
-        public int number;
+        public Car(string model, int year, decimal price, decimal speed) 
+        {
+            Model = model;
+            Year = year;
+            Price = price;
+            Speed = speed;
+        }
 
-        public string Name
+        public Car()
         {
-            get
-            {
-                return name;
-            }
         }
-        public string Color
+
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public decimal Price { get; set; }
+        public decimal Speed {  get; set; }
+
+
+        public string GetCarInfo()
         {
-            get
-            {
-                return color;
-            }
+            return $"Model: {Model}\nYear: {Year}\nPrice: {Price}";
         }
-        public int Position
+
+        public decimal CalculateDepreciation(int years)
         {
-            get
+            decimal depreciationRate = 0.1m;
+            decimal currentPrice = Price;
+
+            for (int i = 0; i < years; i++)
             {
-                return position;
+                currentPrice -= currentPrice * depreciationRate;
             }
-        }
-        public int Number
-        {
-            get
-            {
-                return number;
-            }
+
+            return currentPrice;
         }
     }
 }
